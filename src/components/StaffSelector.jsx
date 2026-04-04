@@ -63,6 +63,12 @@ function StaffSelector({serviceId , salonId, onSelectedStaff}) {
             >
                  Back
             </button>
+
+            <button
+                onClick={() => navigate('/availability')}
+            >
+                 Next
+            </button>
     </div>
   )
 }
