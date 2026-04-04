@@ -17,7 +17,7 @@ function App() {
   return (
     <>
 
-      <div className='body-wrapper'>
+      <div className='body-wrapper' >
         <Header/>
         <Routes>
           <Route path='/'
@@ -65,8 +65,11 @@ function App() {
                   selectedService  = {selectedService}
                   selectedStaff    = {selectedStaff}
                   selectedDateTime = {selectedDateTime}
-                  onConfirm = {() => {
-                    alert('Booking completed successfully')
+                  onConfirm={() => {
+                    setSelectedService(null);
+                    setSelectedStaff(null);
+                    setSelectedDateTime(null);
+                    navigate('/');
                   }}
 
                   onCancel = {() => navigate('availability')}

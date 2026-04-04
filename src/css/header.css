@@ -1,0 +1,58 @@
+.salon-header {
+          background-color: #1a1a18;
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* Subtle grain texture overlay */
+        .salon-header::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+          opacity: 0.4;
+          pointer-events: none;
+        }
+
+        /* Gold decorative line */
+        .header-rule {
+          border: none;
+          height: 1px;
+          background: linear-gradient(to right, transparent, #c9a96e, transparent);
+          margin: 0.75rem auto;
+          width: 180px;
+          opacity: 0.8;
+        }
+
+        .salon-name {
+          font-family: 'Cormorant Garamond', serif;
+          font-weight: 300;
+          font-size: clamp(2rem, 6vw, 3.25rem);
+          letter-spacing: 0.12em;
+          color: #f5f0e8;
+          margin: 0;
+          line-height: 1.1;
+        }
+
+        .salon-tagline {
+          font-family: 'Jost', sans-serif;
+          font-weight: 300;
+          font-size: clamp(0.65rem, 2vw, 0.75rem);
+          letter-spacing: 0.35em;
+          text-transform: uppercase;
+          color: #c9a96e;
+          margin: 0;
+        }
+
+        /* Step indicator */
+        .step-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #3a3a36;
+          transition: background-color 0.3s;
+        }
+
+        .step-dot.active {
+          background-color: #c9a96e;
+        }
