@@ -47,3 +47,11 @@ export async function createAppointment(appointmentData) {
     body: JSON.stringify(appointmentData),
   });
 }
+
+export async function fetchStaff(salon_id, service_id) {
+  return apiFetch(`/staff-for-service?salon_id=${salon_id}&service_id=${service_id}`);
+}
+
+export async function fetchAvailability(staffId, serviceId, date){
+      return apiFetch(`/availability/slots/?staff_user_id=${staffId}&service_id=${serviceId}&date=${date}`);
+}

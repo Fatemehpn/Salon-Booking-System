@@ -5,7 +5,7 @@ function Header(){
       const salonName = "Glam Beauty Salon";
 
       return(
-            <div className="header-wrapper">
+            <div className="header-wrapper text-center mb-5">
                   <h1>{salonName}</h1>
                   <p>Welcome to booking app</p>
             </div>
