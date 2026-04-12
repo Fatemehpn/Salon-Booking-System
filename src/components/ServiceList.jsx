@@ -42,13 +42,13 @@ function ServiceList({ onSelectService, selectedService }) {
   return (
     <div className="container py-4 py-md-5">
 
-      {/* Page header */}
+
       <div className="text-center mb-4 mb-md-5">
-        <h1 className="fw-bold mb-2">Our Services</h1>
+        <h2 className="fw-bold mb-2">Our Services</h2>
         <p className="text-muted">Choose a service to get started</p>
       </div>
 
-      {/* Service cards grid */}
+
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mb-4 mb-md-5">
         {services.map((s) => (
           <div key={s.id} className="col">
@@ -61,10 +61,10 @@ function ServiceList({ onSelectService, selectedService }) {
         ))}
       </div>
 
-      {/* Footer action */}
-      <div className="d-flex justify-content-end">
+
+      <div className="d-grid d-sm-flex justify-content-sm-end">
         <button
-          className={`btn btn-dark btn-lg px-5 ${!selectedService ? 'disabled opacity-50' : ''}`}
+          className={`btn btn-dark px-5 ${!selectedService ? 'disabled opacity-50' : ''}`}
           onClick={() => selectedService && navigate('/staff')}
         >
           Next →

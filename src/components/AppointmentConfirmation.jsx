@@ -37,8 +37,11 @@ function AppointmentConfirmation({ selectedService, selectedStaff, selectedDateT
     };
 
     return (
-        <div className='container mt-4'>
-            <h2>Review your booking</h2>
+        <div className='container py-4 py-md-5'>
+            <div className="text-center mb-4 mb-md-5">
+                <h2 className="fw-bold mb-2">Review your booking</h2>
+                <p className="text-muted">Confirm your appointment details below</p>
+            </div>
 
             <div className='card p-4 mb-4 shadow-sm'>
                 <h5 className='card-title mb-3'>Booking Summary</h5>
@@ -50,7 +53,7 @@ function AppointmentConfirmation({ selectedService, selectedStaff, selectedDateT
 
                 <div className='row mb-2'>
                     <div className='col-5 text-muted'>Staff</div>
-                    <div className='col-7 fw-semibold'>{selectedStaff.name}</div>
+                    <div className='col-7 fw-semibold'>{selectedStaff.full_name}</div>
                 </div>
 
                 <div className='row mb-2'>
@@ -84,7 +87,7 @@ function AppointmentConfirmation({ selectedService, selectedStaff, selectedDateT
                 <div className='alert alert-danger'>{error}</div>
             )}
 
-            <div className='d-flex gap-2'>
+            <div className='d-grid d-sm-flex gap-2'>
                 <button
                     className='btn btn-outline-secondary'
                     onClick={onCancel}

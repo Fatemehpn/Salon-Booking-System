@@ -52,13 +52,11 @@ function AvailabilitySelector({ serviceId, staffId, onSelectSlot }) {
   return (
     <div className="container py-4 py-md-5">
 
-      {/* Page header */}
       <div className="text-center mb-4 mb-md-5">
-        <h1 className="fw-bold mb-2">Pick a Time</h1>
+        <h2 className="fw-bold mb-2">Pick a Time</h2>
         <p className="text-muted">Select a date and available slot</p>
       </div>
 
-      {/* Date picker */}
       <div className="row justify-content-center mb-4">
         <div className="col-12 col-sm-8 col-md-5">
           <label className="form-label fw-semibold">Select Date</label>
@@ -72,7 +70,6 @@ function AvailabilitySelector({ serviceId, staffId, onSelectSlot }) {
         </div>
       </div>
 
-      {/* Slots area */}
       <div className="mb-5">
 
         {loading && (
@@ -116,8 +113,7 @@ function AvailabilitySelector({ serviceId, staffId, onSelectSlot }) {
         )}
       </div>
 
-      {/* Navigation */}
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-grid d-sm-flex justify-content-sm-between align-items-sm-center gap-2">
         <button className="btn btn-outline-dark px-4" onClick={() => navigate('/staff')}>
           ← Back
         </button>
