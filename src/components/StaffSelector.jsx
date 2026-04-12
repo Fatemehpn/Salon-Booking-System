@@ -45,20 +45,20 @@ function StaffSelector({ serviceId, salonId, onSelectedStaff }) {
   return (
     <div className="container py-4 py-md-5">
 
-      {/* Page header */}
+
       <div className="text-center mb-4 mb-md-5">
-        <h1 className="fw-bold mb-2">Choose a Stylist</h1>
+        <h2 className="fw-bold mb-2">Choose a Stylist</h2>
         <p className="text-muted">Select the person you'd like to work with</p>
       </div>
 
-      {/* Empty state */}
+
       {staff.length === 0 && (
         <div className="text-center text-muted py-5">
           <p className="mb-0">No stylists available for this service.</p>
         </div>
       )}
 
-      {/* Staff grid */}
+
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mb-5">
         {staff.map(person => {
           const isSelected = selectedId === person.id
@@ -74,7 +74,6 @@ function StaffSelector({ serviceId, salonId, onSelectedStaff }) {
               >
                 <div className="card-body d-flex flex-column align-items-center text-center p-4">
 
-                  {/* Avatar initials */}
                   <div
                     className={`rounded-circle d-flex align-items-center justify-content-center mb-3 fw-bold fs-4 ${isSelected ? 'bg-dark text-white' : 'bg-light text-dark'}`}
                     style={{ width: 64, height: 64, transition: 'background-color 0.2s' }}
@@ -95,8 +94,8 @@ function StaffSelector({ serviceId, salonId, onSelectedStaff }) {
         })}
       </div>
 
-      {/* Navigation */}
-      <div className="d-flex justify-content-between">
+
+      <div className="d-grid d-sm-flex justify-content-sm-between gap-2">
         <button className="btn btn-outline-dark px-4" onClick={() => navigate('/')}>
           ← Back
         </button>

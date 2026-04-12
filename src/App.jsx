@@ -6,6 +6,7 @@ import StaffSelector from './components/StaffSelector';
 import {apiFetch} from ".//api/api";
 import AvailabilitySelector from './components/AvailabilitySelector';
 import AppointmentConfirmation from './components/AppointmentConfirmation';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -80,7 +81,7 @@ function App() {
           />
         </Routes>
 
-
+        <Footer/>
 
       </div>
 

@@ -9,15 +9,15 @@ function BookingCard({ service, onClick, isSelected }) {
     >
       <div className="card-body d-flex flex-column p-4">
 
-        {/* Selected badge */}
+
         {isSelected && (
           <span className="badge bg-dark mb-3 align-self-start">✓ Selected</span>
         )}
 
-        {/* Service name */}
+
         <h5 className="card-title fw-bold mb-3">{service.name}</h5>
 
-        {/* Details */}
+
         <ul className="list-unstyled text-muted mb-4 flex-grow-1">
           <li className="mb-1">
             <small>⏱ {service.duration_min} minutes</small>
@@ -27,7 +27,7 @@ function BookingCard({ service, onClick, isSelected }) {
           </li>
         </ul>
 
-        {/* CTA button */}
+
         <button
           className={`btn w-100 ${isSelected ? 'btn-dark' : 'btn-outline-dark'}`}
           onClick={(e) => { e.stopPropagation(); onClick(); }}
