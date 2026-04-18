@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://salon-booking-backend-60fd.onrender.com';
 
 //Helper function
 export async function apiFetch(endpoint, options={}){
